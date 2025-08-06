@@ -1,0 +1,13 @@
+{
+  "users": [
+    {
+      "userId": "01f7474d-cd70-49f6-bbcd-9ce9e77a1c74",
+      "fName": "Matthew",
+      "lName": "Bondad",
+      "email": "matthewbondad@gmail.com",
+      "username": "matthew25",
+      "password": "$2b$10$8U2XlM.no0I.ZI/z7EWlKO/.tlb0CT5FK27nxM8.w/AipDP4ZTQ06"
+    }
+  ],
+  "posts": []
+}
