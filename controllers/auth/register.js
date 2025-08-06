@@ -3,11 +3,7 @@ import bcrypt from "bcrypt";
 import { v4 as uuidv4 } from "uuid";
 
 async function userRegister(req, res) {
-  const { fName, lName, email, username, password, confirmPassword } = req.body;
-
-  if (password !== confirmPassword) {
-    return res.status(400).json({ message: "Passwords do not match" });
-  }
+  const { fName, lName, email, username, password } = req.body;
 
   const hashedPassword = await bcrypt.hash(password, 10);
 
