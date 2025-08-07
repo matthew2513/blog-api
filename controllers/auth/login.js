@@ -2,21 +2,28 @@ import db from "../../db/db.js";
 import bcrypt from "bcrypt";
 
 async function userLogin(req, res) {
-  const { usernameOrEmail, password } = req.body;
+  try {
+    const { usernameOrEmail, password } = req.body;
 
-  let user =
-    db.data.users.find((u) => u.username === usernameOrEmail) ||
-    db.data.users.find((u) => u.email === usernameOrEmail);
+    await db.read();
 
-  if (!user) return res.status(400).json({ message: "User not found" });
+    let user =
+      db.data.users.find((u) => u.username === usernameOrEmail) ||
+      db.data.users.find((u) => u.email === usernameOrEmail);
 
-  const valid = await bcrypt.compare(password, user.password);
-  if (!valid) return res.status(400).json({ message: "Invalid credentials" });
+    if (!user) return res.status(400).json({ message: "User not found" });
 
-  req.session.userId = user.userId;
-  req.session.username = user.username;
+    const valid = await bcrypt.compare(password, user.password);
+    if (!valid) return res.status(400).json({ message: "Invalid credentials" });
 
-  res.json({ message: "Logged in" });
+    req.session.userId = user.userId;
+    req.session.username = user.username;
+
+    res.json({ message: "Logged in" });
+  } catch (error) {
+    console.error("Login error:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
 }
 
 function userLogout(req, res) {
