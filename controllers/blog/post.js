@@ -21,7 +21,7 @@ async function postBlog(req, res) {
     db.data.posts.push(newPost);
     await db.write();
 
-    res.status(201).json({ message: "Post created" });
+    res.status(201).json(newPost);
   } catch (error) {
     console.error("Error posting blog:", error);
     res.status(500).json({ message: "Internal Server Error" });

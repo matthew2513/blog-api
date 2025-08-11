@@ -7,7 +7,43 @@
       "email": "matthewbondad@gmail.com",
       "username": "matthew25",
       "password": "$2b$10$8U2XlM.no0I.ZI/z7EWlKO/.tlb0CT5FK27nxM8.w/AipDP4ZTQ06"
+    },
+    {
+      "userId": "d1804821-4fb8-43be-ac28-a562a8dcb12e",
+      "fName": "asdasdasd",
+      "lName": "asdasdasd",
+      "email": "asdasdasd@gmail.com",
+      "username": "asdasdas",
+      "password": "$2b$10$wyxH6Sbdu2NB5B6cfvYOE.9Os1XGcyWu4duPGKlo2H5SNeAR3HTz."
     }
   ],
-  "posts": []
+  "posts": [
+    {
+      "postId": "f3778cab-65f6-40a2-b301-563e9e1405cb",
+      "userId": "01f7474d-cd70-49f6-bbcd-9ce9e77a1c74",
+      "title": "update lang",
+      "author": "qweqweqwe",
+      "description": "qweqweqwe",
+      "summary": "qweqweqweq",
+      "date": "August 7, 2025"
+    },
+    {
+      "postId": "b44dd09d-fff6-4cf8-9bec-1f83944384f3",
+      "userId": "01f7474d-cd70-49f6-bbcd-9ce9e77a1c74",
+      "title": "asdasdasda",
+      "author": "asdsadasdasd",
+      "description": "asdasdasd",
+      "summary": "asdasdasdasd",
+      "date": "August 7, 2025"
+    },
+    {
+      "postId": "2c8c11e9-6756-4f6b-9f52-8f96fc81a243",
+      "userId": "01f7474d-cd70-49f6-bbcd-9ce9e77a1c74",
+      "title": "hjklhjklhjkl",
+      "author": "hkjlhjklhjkl",
+      "description": "hjklhjklhjk",
+      "summary": "hjklhjklhjklhklhjkl",
+      "date": "August 7, 2025"
+    }
+  ]
 }
