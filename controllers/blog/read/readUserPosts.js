@@ -1,9 +1,9 @@
 import db from "../../../db/db.js";
 
 async function readUserPosts(req, res) {
-  const userId = req.session?.userId;
-
   try {
+    const userId = req.session?.userId;
+
     if (!userId) {
       return res
         .status(401)
